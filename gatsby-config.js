@@ -18,15 +18,16 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-theme-blog`,
-      options: {
-        basePath: `/blog`,
-      },
-    },
-    {
       resolve: `gatsby-theme-notes`,
       options: {
         basePath: `/notes`,
+      },
+    },
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        // basePath defaults to `/` so this could also be included without options as just `gatsby-theme-blog`,
+        basePath: `/`,
       },
     },
   ],
